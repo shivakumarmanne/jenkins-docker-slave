@@ -1,5 +1,5 @@
-FROM ubuntu:14.04
-MAINTAINER Bibin Wilson <bibinwilsonn@gmail.com>
+FROM ubuntu:16.04
+MAINTAINER Shiva Kumar <shivakumarmanne@gmail.com>
 
 # Make sure the package repository is up to date.
 RUN apt-get update
@@ -11,7 +11,7 @@ RUN sed -i 's|session    required     pam_loginuid.so|session    optional     pa
 RUN mkdir -p /var/run/sshd
 
 # Install JDK 7 (latest edition)
-RUN apt-get install -y openjdk-7-jdk
+RUN apt-get install -y openjdk-8-jdk
 
 # Add user jenkins to the image
 RUN adduser --quiet jenkins
